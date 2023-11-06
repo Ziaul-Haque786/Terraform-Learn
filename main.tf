@@ -1,5 +1,5 @@
 resource "azurerm_resource_group" "appgrp" {
-    name = "app-grp"
-    location = "Central India"
+    name = local.azurerm_resource_group
+    location = local.location
   
 }

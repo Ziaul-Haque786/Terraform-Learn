@@ -2,6 +2,8 @@ resource "azurerm_storage_container" "container1" {
   name                  = "container1"
   storage_account_name  = "appstr1122"
   container_access_type = "blob"
+
+  depends_on = [ azurerm_storage_account.appstr1122 ]
 }
 
 resource "azurerm_storage_blob" "blobfile" {
