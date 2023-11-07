@@ -1,7 +1,7 @@
-resource "azurerm_storage_account" "appstr1122" {
-  name                     = "appstr1122"
-  resource_group_name      = "app-grp"
-  location                 = "Central India"
+resource "azurerm_storage_account" "appstr11212" {
+  name                     = "appstr11212"
+  resource_group_name      = local.resource_group_name
+  location                 = local.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
