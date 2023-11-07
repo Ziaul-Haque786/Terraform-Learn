@@ -6,13 +6,13 @@ resource "azurerm_virtual_network" "Vnet1" {
  
 
   subnet {
-    name           = "subnetA"
-    address_prefix = "10.0.1.0/24"
+    name           = local.Subnet[0].name
+    address_prefix = local.Subnet[0].address_prefix
   }
 
   subnet {
-    name           = "subnetB"
-    address_prefix = "10.0.2.0/24"
+    name           = local.Subnet[1].name
+    address_prefix = local.Subnet[1].address_prefix
     
   }
 
