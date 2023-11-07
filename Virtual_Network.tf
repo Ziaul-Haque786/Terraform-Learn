@@ -1,21 +1,10 @@
 resource "azurerm_virtual_network" "Vnet1" {
-  name                = "Vnet"
+  name                = "Vnet1"
   location            = local.location
-  resource_group_name = local.azurerm_resource_group
+  resource_group_name = local.resource_group_name
   address_space       = ["10.0.0.0/16"]
+
+  depends_on = [ azurerm_resource_group.appgrp ]
  
-
-  subnet {
-    name           = local.Subnet[0].name
-    address_prefix = local.Subnet[0].address_prefix
-  }
-
-  subnet {
-    name           = local.Subnet[1].name
-    address_prefix = local.Subnet[1].address_prefix
-    
-  }
-
-depends_on = [ azurerm_resource_group.appgrp ]
 
 }
