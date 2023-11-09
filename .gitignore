@@ -11,3 +11,7 @@
 
 #plan files
 *.tfplan
+
+#providers
+
+providers.tf
